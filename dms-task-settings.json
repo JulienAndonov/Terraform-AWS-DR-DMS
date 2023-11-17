@@ -1,0 +1,53 @@
+{
+  "FullLoadSettings": {
+      "TargetTablePrepMode": "DROP_AND_CREATE",
+      "StopTaskCachedChangesApplied": false,
+      "StopTaskCachedChangesNotApplied": false,
+      "MaxFullLoadSubTasks": 8,
+      "TransactionConsistencyTimeout": 600,
+      "CommitRate": 10000
+  },
+  "TargetMetadata": {
+      "SupportLobs": true,
+      "FullLobMode": true,
+      "BatchApplyEnabled": false,
+      "LimitedSizeLobMode": false,
+      "LobChunkSize": 64,
+      "LobMaxSize": 32,
+      "TaskRecoveryTableEnabled": false
+  },
+  "ValidationSettings": {
+      "EnableValidation": false
+  },
+  "Logging": {
+      "EnableLogging": false,
+      "LogComponents": [
+          {
+              "Id": "SOURCE_UNLOAD",
+              "Severity": "LOGGER_SEVERITY_DEFAULT"
+          },
+          {
+              "Id": "TARGET_LOAD",
+              "Severity": "LOGGER_SEVERITY_DEFAULT"
+          },
+          {
+              "Id": "SOURCE_CAPTURE",
+              "Severity": "LOGGER_SEVERITY_DEFAULT"
+          },
+          {
+              "Id": "TARGET_APPLY",
+              "Severity": "LOGGER_SEVERITY_DEFAULT"
+          },
+          {
+              "Id": "TASK_MANAGER",
+              "Severity": "LOGGER_SEVERITY_DEFAULT"
+          }
+      ]
+  },
+  "ControlTablesSettings": {
+      "HistoryTimeslotInMinutes": 5,
+      "HistoryTableEnabled": false,
+      "SuspendedTablesTableEnabled": false,
+      "StatusTableEnabled": false
+  }
+}
